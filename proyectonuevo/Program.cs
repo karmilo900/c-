@@ -21,7 +21,7 @@ class Program
             Console.WriteLine("Por favor escriba un nombre y un apellido del empleado: ");
             nombre = Console.ReadLine();
 
-             Console.WriteLine("Por favor escriba la hora de ingreso del empleado (en formato HH:mm:ss): ");
+             Console.WriteLine("Por favor escriba la hora de ingreso del empleado (en formato  de 24hrs HH:mm:ss): ");
             if (!DateTime.TryParseExact(Console.ReadLine(), "HH:mm:ss", null, System.Globalization.DateTimeStyles.None, out horain))
             {
                 Console.WriteLine("Formato de hora incorrecto. Por favor, introduzca la hora en el formato correcto (HH:mm:ss).");
@@ -38,7 +38,7 @@ class Program
 
             break;
             case 2:
-                Console.WriteLine("identificacion    nombre      hora entrada      hora salida");
+                Console.WriteLine("identificacion    nombre        hora entrada     hora salida     (hrs)          Disponibilidad");
 
                 EmpleadoController empleControl = new EmpleadoController();
                 empleControl.listarEmpleado();

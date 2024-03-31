@@ -1,6 +1,8 @@
 using System;
 using System.Data;
 using MySqlCon;
+using System.Globalization;
+
 
 namespace empeadomodel{
 
@@ -40,9 +42,26 @@ namespace empeadomodel{
 
         public void listasempleados()
         {
+            DateTime horaActual = DateTime.Now;
+            string turno;
             foreach (DataRow dato in con.listaempleados().Rows)
             {
-                Console.WriteLine($"{dato["identificacion"].ToString()}\t{dato["Nombre"].ToString()}\t{dato["hora_in"].ToString()}\t{dato["hora_sal"].ToString()}");
+                String salida= dato["hora_sal"].ToString();
+                String entrada=dato["hora_in"].ToString();
+                
+                DateTime horarealin= DateTime.ParseExact(entrada, "HH:mm:ss", CultureInfo.InvariantCulture);
+                DateTime horarealsal= DateTime.ParseExact(salida, "HH:mm:ss", CultureInfo.InvariantCulture);
+                
+                if(horaActual>horarealin && horaActual<horarealsal){
+                    turno= "En turno";
+                }else{
+                    turno= "fuera";
+                }
+                TimeSpan trabajado=horarealsal-horarealin;
+
+        
+                Console.WriteLine($"{dato["identificacion"].ToString()}  \t{dato["Nombre"].ToString()}\t  {dato["hora_in"].ToString()}\t   {dato["hora_sal"].ToString()}\t{trabajado}\t  {turno}");
+                
             }
         }
 
