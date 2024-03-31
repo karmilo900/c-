@@ -1,6 +1,7 @@
 using MySql.Data.MySqlClient;
 using System;
 using System.Data;
+using System.Dynamic;
 
 
 
@@ -43,8 +44,35 @@ namespace MySqlCon{
             }
        
        }
+       public DataTable listaempleados(String tabla)
+{
+    DataTable dtt = null;
+    DataSet dats= null;
 
+    try
+    {
+        string sql = "SELECT * FROM empleadoin" ; ;
+        con.Open();
+        adap = new MySqlDataAdapter(sql, con);
+        dats = new DataSet();
+        adap.Fill(dats, tabla);
+        dtt = dats.Tables[tabla]; 
+    }
+    catch (Exception e)
+    {
+        
+        Console.WriteLine("Error al obtener datos de la tabla " + tabla + ": " + e.Message);
+    }
+    finally
+    {
+        con.Close();
+    }
 
+    return dtt;
+}
+       
+
+        
     }
         }
 

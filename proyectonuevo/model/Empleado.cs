@@ -1,4 +1,5 @@
 using System;
+using System.Data;
 using MySqlCon;
 
 namespace empeadomodel{
@@ -21,7 +22,11 @@ namespace empeadomodel{
             this.Nombre=nombre;
             this.Ingreso=ingreso;
             this.HoraSalida=horaSalida;
-                    }
+                                }
+
+        public Empleado(string nombreTabla){
+            this.Nombre =nombreTabla;
+        }
         Conexion con = new Conexion();
 
         public bool registroEmpleadoin(){
@@ -30,6 +35,13 @@ namespace empeadomodel{
                 return true;
             }else{
                 return false;
+            }
+        }
+
+        public void listasempleados(){
+            foreach (DataRow dato in con.listaempleados(this.Nombre).Rows){
+
+                Console.WriteLine(dato["identificación: "].ToString()+"-"+dato["Nombre: "].ToString()+"-"+dato["hora ingreso"]);
             }
         }
 
