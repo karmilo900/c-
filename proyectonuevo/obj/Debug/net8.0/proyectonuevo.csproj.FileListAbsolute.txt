@@ -12,3 +12,4 @@ C:\Users\juan camilo\Documents\c#\proyectonuevo\obj\Debug\net8.0\refint\proyecto
 C:\Users\juan camilo\Documents\c#\proyectonuevo\obj\Debug\net8.0\proyectonuevo.pdb
 C:\Users\juan camilo\Documents\c#\proyectonuevo\obj\Debug\net8.0\proyectonuevo.genruntimeconfig.cache
 C:\Users\juan camilo\Documents\c#\proyectonuevo\obj\Debug\net8.0\ref\proyectonuevo.dll
+C:\Users\juan camilo\Documents\c#\proyectonuevo\obj\Debug\net8.0\proyectonuevo.sourcelink.json

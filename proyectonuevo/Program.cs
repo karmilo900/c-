@@ -1,2 +1,12 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!asasasaasas");
+﻿using System;
+
+namespace CSharpprogram{
+class program{
+
+    
+    static void Main(string[] args){
+        
+    
+}
+}
+}
