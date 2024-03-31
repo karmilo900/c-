@@ -24,9 +24,18 @@ namespace empeadomodel{
                     }
         Conexion con = new Conexion();
 
-        public bool registroEmpleado(){
-            string sql = "INSERT INTO empleado (identificacion, nombre) VALUES ('" + this.Identificacion + "','" + this.Nombre + "'); ";
-                    sql += "INSERT INTO ingresos (identifi, hora_in, hora_sal) VALUES ('" + this.Identificacion + "','" + this.Ingreso.ToString("yyyy-MM-dd HH:mm:ss") + "','" + this.HoraSalida.ToString("yyyy-MM-dd HH:mm:ss") + "');";
+        public bool registroEmpleadoin(){
+            string sql = "INSERT INTO empleadoin (identificacion, nombre, hora_in) VALUES ('" + this.Identificacion + "','" + this.Nombre + "','" + this.Ingreso.ToString("yyyy-MM-dd HH:mm:ss") + "')";
+
+            if(con.guardarSQL(sql)){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        public bool registroempleadosal(){
+            string sql = "INSERT INTO empleadosal (identificacion, nombre, hora_sal) VALUES ('" + this.Identificacion + "','" + this.Nombre + "','" + this.HoraSalida.ToString("yyyy-MM-dd HH:mm:ss") + "')";
+
             if(con.guardarSQL(sql)){
                 return true;
             }else{

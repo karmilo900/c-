@@ -9,7 +9,7 @@ namespace empleadocontroller{
         public void registrarEmpleado(int identificacion, string nombre, DateTime ingreso, DateTime horaSalida){
             if(nombre != "" ){
                 Empleado emp = new Empleado(identificacion, nombre, ingreso, horaSalida);
-                if(emp.registroEmpleado()){
+                if(emp.registroEmpleadoin()){
                     Console.WriteLine("registro exitoso");
                 }else{
                     Console.WriteLine("registro no exitoso");
