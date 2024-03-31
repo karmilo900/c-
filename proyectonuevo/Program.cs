@@ -38,7 +38,7 @@ class Program
 
             break;
             case 2:
-                Console.WriteLine("identificacion         nombre            hora entrada        hora salida");
+                Console.WriteLine("identificacion    nombre      hora entrada      hora salida");
 
                 EmpleadoController empleControl = new EmpleadoController();
                 empleControl.listarEmpleado();

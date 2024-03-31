@@ -44,34 +44,31 @@ namespace MySqlCon{
             }
        
        }
-       public DataTable listaempleados(String tabla)
+      public DataTable listaempleados()
 {
-    DataTable dtt = null;
-    DataSet dats= null;
+        DataTable dtt = null;
+        DataSet dats = null;
 
-    try
-    {
-        string sql = "SELECT * FROM " + tabla; ;
-        con.Open();
-        adap = new MySqlDataAdapter(sql, con);
-        dats = new DataSet();
-        adap.Fill(dats, tabla);
-        dtt = dats.Tables[tabla]; 
-    }
-    catch (Exception e)
-    {
-        
-        Console.WriteLine("Error al obtener datos de la tabla " + tabla + ": " + e.Message);
-    }
-    finally
-    {
-        con.Close();
-    }
+        try
+        {
+            string sql = "SELECT e.identificacion, e.nombre, e.hora_in, s.hora_sal FROM empleadoin e JOIN empleadosal s ON e.identificacion = s.identificacion";
+            con.Open();
+            adap = new MySqlDataAdapter(sql, con);
+            dats = new DataSet();
+            adap.Fill(dats);
+            dtt = dats.Tables[0]; 
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("Error al obtener datos de las tablas: " + e.Message);
+        }
+        finally
+        {
+            con.Close();
+        }
 
-    return dtt;
+        return dtt;
 }
-       
-
         
     }
         }
