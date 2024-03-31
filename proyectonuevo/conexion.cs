@@ -23,6 +23,28 @@ namespace MySqlCon{
        public Conexion(){
             Conectar();
        }
+       public bool guardarSQL(string sql){
+            try{
+                comd= new MySqlCommand(sql, con);
+                con.Open();
+                int a= comd.ExecuteNonQuery();
+                if(a > 0){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+            catch (Exception e){
+                throw e;
+
+            }finally{
+                con.Close();
+
+            }
+       
+       }
+
+
     }
         }
 
