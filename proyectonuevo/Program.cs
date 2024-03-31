@@ -6,10 +6,10 @@ class Program
 {
     static void Main(string[] args)
     {
-        DateTime hora = new DateTime(1, 1, 1, 14, 30, 0);
-        DateTime horasal = new DateTime(1, 1, 1, 22, 30, 0);
+        DateTime hora = new DateTime(1, 1, 1, 18, 30, 0);
+        DateTime horasal = new DateTime(1, 1, 1, 23, 30, 0);
         EmpleadoController empControl = new EmpleadoController();
-        empControl.registrarEmpleado(102323223,"carlos alberto",hora,horasal);
+        empControl.registrarEmpleado(103423223,"juan alberto",hora,horasal);
         
     }
 }
