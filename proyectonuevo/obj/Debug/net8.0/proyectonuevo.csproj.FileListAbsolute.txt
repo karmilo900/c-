@@ -1,0 +1,14 @@
+C:\Users\juan camilo\Documents\c#\proyectonuevo\bin\Debug\net8.0\proyectonuevo.exe
+C:\Users\juan camilo\Documents\c#\proyectonuevo\bin\Debug\net8.0\proyectonuevo.deps.json
+C:\Users\juan camilo\Documents\c#\proyectonuevo\bin\Debug\net8.0\proyectonuevo.runtimeconfig.json
+C:\Users\juan camilo\Documents\c#\proyectonuevo\bin\Debug\net8.0\proyectonuevo.dll
+C:\Users\juan camilo\Documents\c#\proyectonuevo\bin\Debug\net8.0\proyectonuevo.pdb
+C:\Users\juan camilo\Documents\c#\proyectonuevo\obj\Debug\net8.0\proyectonuevo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\juan camilo\Documents\c#\proyectonuevo\obj\Debug\net8.0\proyectonuevo.AssemblyInfoInputs.cache
+C:\Users\juan camilo\Documents\c#\proyectonuevo\obj\Debug\net8.0\proyectonuevo.AssemblyInfo.cs
+C:\Users\juan camilo\Documents\c#\proyectonuevo\obj\Debug\net8.0\proyectonuevo.csproj.CoreCompileInputs.cache
+C:\Users\juan camilo\Documents\c#\proyectonuevo\obj\Debug\net8.0\proyectonuevo.dll
+C:\Users\juan camilo\Documents\c#\proyectonuevo\obj\Debug\net8.0\refint\proyectonuevo.dll
+C:\Users\juan camilo\Documents\c#\proyectonuevo\obj\Debug\net8.0\proyectonuevo.pdb
+C:\Users\juan camilo\Documents\c#\proyectonuevo\obj\Debug\net8.0\proyectonuevo.genruntimeconfig.cache
+C:\Users\juan camilo\Documents\c#\proyectonuevo\obj\Debug\net8.0\ref\proyectonuevo.dll
