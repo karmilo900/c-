@@ -18,7 +18,7 @@ class Program
             Console.WriteLine("Por favor escriba el # de identificación del empleado: ");
             ident = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Por favor escriba el nombre del empleado: ");
+            Console.WriteLine("Por favor escriba un nombre y un apellido del empleado: ");
             nombre = Console.ReadLine();
 
              Console.WriteLine("Por favor escriba la hora de ingreso del empleado (en formato HH:mm:ss): ");
@@ -38,6 +38,8 @@ class Program
 
             break;
             case 2:
+                Console.WriteLine("identificacion         nombre            hora entrada        hora salida");
+
                 EmpleadoController empleControl = new EmpleadoController();
                 empleControl.listarEmpleado();
             

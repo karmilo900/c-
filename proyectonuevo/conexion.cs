@@ -51,7 +51,7 @@ namespace MySqlCon{
 
     try
     {
-        string sql = "SELECT * FROM empleadoin" ; ;
+        string sql = "SELECT * FROM " + tabla; ;
         con.Open();
         adap = new MySqlDataAdapter(sql, con);
         dats = new DataSet();

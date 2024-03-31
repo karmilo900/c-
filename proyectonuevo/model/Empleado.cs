@@ -41,7 +41,7 @@ namespace empeadomodel{
         public void listasempleados(){
             foreach (DataRow dato in con.listaempleados(this.Nombre).Rows){
 
-                Console.WriteLine(dato["identificación: "].ToString()+"-"+dato["Nombre: "].ToString()+"-"+dato["hora ingreso"]);
+                Console.WriteLine(dato["identificacion"].ToString()+"         "+dato["Nombre"].ToString()+"             "+dato["hora_in"].ToString());
             }
         }
 

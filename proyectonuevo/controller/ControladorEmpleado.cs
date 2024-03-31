@@ -22,7 +22,7 @@ namespace empleadocontroller{
         }
 
         public void listarEmpleado(){
-            emp= new Empleado("Empleado");
+            emp= new Empleado("empleadoin");
             emp.listasempleados();
         }
     }
